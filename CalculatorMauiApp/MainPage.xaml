@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculatorMauiApp.MainPage">
+    <StackLayout Padding="20" VerticalOptions="Start" BackgroundColor="Teal">
+        <Entry x:Name="Display" FontSize="24" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Margin="0,-20,0,50" BackgroundColor="Teal" />
+
+        <Grid BackgroundColor="Teal" Margin="0,300,0,0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80" />
+                <RowDefinition Height="80" />
+                <RowDefinition Height="80" />
+                <RowDefinition Height="80" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="But_7" Text="7"
+                    Margin="5"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    BackgroundColor="#404040"
+                    TextColor="White"
+                    Clicked="NumberButton_Clicked"
+                    Grid.Row="0" Grid.Column="0"/>
+
+            <Button x:Name="But_8" Text="8" 
+                    Margin="5"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    BackgroundColor="#404040"
+                    TextColor="White"
+                    Clicked="NumberButton_Clicked"
+                    Grid.Row="0" Grid.Column="1"/>
+
+            <Button x:Name="But_9" Text="9"
+                    Margin="5"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    BackgroundColor="#404040"
+                    TextColor="White"
+                    Clicked="NumberButton_Clicked"
+                    Grid.Row="0" Grid.Column="2"/>
+
+            <Button x:Name="But_Divide" Text="/"
+                    Margin="5"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    BackgroundColor="#404040"
+                    TextColor="White"
+                    Clicked="OperatorButton_Clicked"
+                    Grid.Row="0" Grid.Column="3"/>
+
+            <Button x:Name="But_4" Text="4"
+                    Margin="5"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    BackgroundColor="#404040"
+                    TextColor="White"
+                    Clicked="NumberButton_Clicked"
+                    Grid.Row="1" Grid.Column="0" />
+
+            <Button x:Name="But_5" Text="5"
+                    Margin="5"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    BackgroundColor="#404040"
+                    TextColor="White"
+                    Clicked="NumberButton_Clicked"
+                    Grid.Row="1" Grid.Column="1" />
+
+            <Button x:Name="But_6" Text="6"
+                    Margin="5"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    BackgroundColor="#404040"
+                    TextColor="White"
+                    Clicked="NumberButton_Clicked"
+                    Grid.Row="1" Grid.Column="2" />
+
+            <Button x:Name="But_Multiply" Text="*"
+                    Margin="5"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    BackgroundColor="#404040"
+                    TextColor="White"
+                    Clicked="OperatorButton_Clicked"
+                    Grid.Row="1" Grid.Column="3" />
+
+            <Button x:Name="But_1" Text="1"
+                    Margin="5"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    BackgroundColor="#404040"
+                    TextColor="White"
+                    Clicked="NumberButton_Clicked"
+                    Grid.Row="2" Grid.Column="0" />
+
+            <Button x:Name="But_2" Text="2"
+                    Margin="5"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    BackgroundColor="#404040"
+                    TextColor="White"
+                    Clicked="NumberButton_Clicked"
+                    Grid.Row="2" Grid.Column="1" />
+
+            <Button x:Name="But_3" Text="3"
+                    Margin="5"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    BackgroundColor="#404040"
+                    TextColor="White"
+                    Clicked="NumberButton_Clicked"
+                    Grid.Row="2" Grid.Column="2" />
+
+            <Button x:Name="But_Subtract" Text="-"
+                    Margin="5"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    BackgroundColor="#404040"
+                    TextColor="White"
+                    Clicked="OperatorButton_Clicked"
+                    Grid.Row="2" Grid.Column="3" />
+
+            <Button x:Name="But_0" Text="0"
+                    Margin="5"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    BackgroundColor="#404040"
+                    TextColor="White"
+                    Clicked="NumberButton_Clicked"
+                    Grid.Row="3" Grid.Column="0" />
+
+            <Button x:Name="But_Clear" Text="C"
+                    Margin="5"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    BackgroundColor="#404040"
+                    TextColor="White"
+                    Clicked="ClearButton_Clicked"
+                    Grid.Row="3" Grid.Column="1" />
+
+            <Button x:Name="But_Equals" Text="="
+                    Margin="5"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    BackgroundColor="#404040"
+                    TextColor="White"
+                    Clicked="EqualsButton_Clicked"
+                    Grid.Row="3" Grid.Column="2" />
+
+            <Button x:Name="But_Add" Text="+"
+                    Margin="5"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    BackgroundColor="#404040"
+                    TextColor="White"
+                    Clicked="OperatorButton_Clicked"
+                    Grid.Row="3" Grid.Column="3" />
+
+
+
+
+
+
+
+
+        </Grid>
+
+        
+    </StackLayout>
+
+</ContentPage>
+
+<!--<BoxView Color="Gray" Grid.Row="0" Grid.Column="0"/>
+        <BoxView Color="Green" Grid.Row="0" Grid.Column="1" />
+        <BoxView Color="Blue" Grid.Row="1" Grid.Column="0"/>
+        <BoxView Color="Azure" Grid.Row="1" Grid.Column="1" />
+        <BoxView Color="Purple" Grid.Row="0" Grid.Column="2" />
+        <BoxView Color="Red" Grid.Row="1" Grid.Column="2" />
+        <BoxView Color="Orange" Grid.Row="0" Grid.Column="3" />
+        <BoxView Color="Olive" Grid.Row="1" Grid.Column="3" />
+        <BoxView Color="Gray" Grid.Row="2" Grid.Column="0" />
+        <BoxView Color="Bisque" Grid.Row="2" Grid.Column="1" />
+        <BoxView Color="Black" Grid.Row="2" Grid.Column="2" />
+        <BoxView Color="Magenta" Grid.Row="2" Grid.Column="3" />
+        <BoxView Color="Black" Grid.Row="3" Grid.Column="0" />
+        <BoxView Color="Green" Grid.Row="3" Grid.Column="1" />
+        <BoxView Color="Orange" Grid.Row="3" Grid.Column="2" />
+        <BoxView Color="Red" Grid.Row="3" Grid.Column="3" />
+        <BoxView Color="Blue" Grid.Row="4" Grid.Column="0" />
+        <BoxView Color="Black" Grid.Row="4" Grid.Column="1" />
+        <BoxView Color="Turquoise" Grid.Row="4" Grid.Column="2" />
+        <BoxView Color="Teal" Grid.Row="4" Grid.Column="4" />
+        <BoxView Color="Gray" Grid.Row="5" Grid.Column="0" />
+        <BoxView Color="Black" Grid.Row="5" Grid.Column="1" />
+        <BoxView Color="Orange" Grid.Row="5" Grid.Column="2" />
+        <BoxView Color="Purple" Grid.Row="5" Grid.Column="3" />
+        <BoxView Color="OliveDrab" Grid.Row="5" Grid.Column="4" />-->
+
+
+
+
+
+
+<!--<Label Text="Top Left" FontSize="18" Grid.Row="0" Grid.Column="0"/>
+        <Label Text="Top Right" FontSize="18" Grid.Row="0" Grid.Column="1" />
+        <Label Text="Bottom Left" FontSize="18" Grid.Row="1" Grid.Column="0" />
+        <Label Text="Bottom Right" FontSize="18" Grid.Row="1" Grid.Column="1" />-->
